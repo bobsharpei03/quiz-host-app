@@ -4,7 +4,7 @@
     "private": true,
     "description": "Lightning Web Component Quiz App on a Salesforce Org",
     "scripts": {
-        "start": "npm lint",
+        "start": "lint",
         "lint": "npm run lint:lwc",
         "lint:lwc": "eslint src/main/default/lwc",
         "test": "npm run lint && npm run test:unit",
