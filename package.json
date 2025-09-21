@@ -5,7 +5,7 @@
     "description": "Lightning Web Component Quiz App on a Salesforce Org",
     "scripts": {
         "lint": "npm run lint:lwc",
-        "lint:lwc": "src/main/default/lwc",
+        "lint:lwc": "eslint src/main/default/lwc",
         "test": "npm run lint && npm run test:unit",
         "test:unit": "sfdx-lwc-jest --skipApiVersionCheck",
         "test:unit:watch": "sfdx-lwc-jest --watch --skipApiVersionCheck",
@@ -13,7 +13,7 @@
         "test:unit:coverage": "sfdx-lwc-jest --coverage --skipApiVersionCheck",
         "prettier": "prettier --write '**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,yaml,yml}'",
         "prettier:verify": "prettier --list-different '**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,yaml,yml}'",
-        "postinstall": "husky",
+        "postinstall": "husky || true",
         "precommit": "lint-staged"
     },
     "lint-staged": {
