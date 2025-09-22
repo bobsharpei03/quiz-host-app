@@ -4,9 +4,7 @@
     "private": true,
     "description": "Lightning Web Component Quiz App on a Salesforce Org",
     "scripts": {
-        "start": "lint",
-        "lint": "npm run lint:lwc",
-        "lint:lwc": "eslint src/main/default/lwc",
+        "lint:json": "eslint --ext .json src/main/default/lwc/jsconfig.json",
         "test": "npm run lint && npm run test:unit",
         "test:unit": "sfdx-lwc-jest --skipApiVersionCheck",
         "test:unit:watch": "sfdx-lwc-jest --watch --skipApiVersionCheck",
@@ -43,12 +41,15 @@
         "@salesforce/eslint-config-lwc": "^4.0.0",
         "@salesforce/eslint-plugin-lightning": "^2.0.0",
         "@salesforce/sfdx-lwc-jest": "^7.1.0",
-        "eslint": "^9.36.0",
         "eslint-plugin-import": "^2.32.0",
         "eslint-plugin-jest": "^29.0.1",
         "husky": "^9.1.7",
         "lint-staged": "^16.1.6",
         "prettier": "^3.6.2",
         "prettier-plugin-apex": "^2.2.6"
+    },
+    "devDependencies": {
+        "eslint": "^9.36.0",
+        "eslint-plugin-json": "^4.0.1"
     }
 }
